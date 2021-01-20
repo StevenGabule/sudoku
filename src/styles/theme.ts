@@ -1,0 +1,11 @@
+// eslint-disable-next-line
+export default {
+    colors: {
+        background: 'radial-gradient(#282C34CC,#282C34)',
+        black: '#282c34',
+        blue: '#a0e9fd',
+        lightBlue: '#caf3fe',
+        white: 'white'
+    },
+    transition: '0.3s'
+}
