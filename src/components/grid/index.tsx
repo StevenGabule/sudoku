@@ -2,23 +2,12 @@ import React, {Children, FC} from "react";
 import {Container, Row} from './styles';
 import Block from "./block";
 import {GRID} from "typings";
-import FillGrid from "utils/fill-grid";
+import {CreateFullGrid} from "utils";
 
 
 const Grid: FC = () => {
-    const grid: GRID = [
-        [0, 4, 0, 0, 0, 0, 0, 0, 0,],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0,],
-        [0, 0, 0, 1, 0, 0, 0, 0, 0,],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0,],
-        [0, 0, 0, 0, 0, 0, 3, 0, 0,],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0,],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0,],
-        [0, 0, 0, 0, 0, 0, 0, 0, 6,],
-        [0, 5, 0, 0, 0, 0, 0, 0, 0,],
-    ];
-    FillGrid(grid);
-    console.log(grid)
+    const grid: GRID = CreateFullGrid();
+
     return (
         <Container data-cy={"grid-container"}>
             {Children.toArray(
